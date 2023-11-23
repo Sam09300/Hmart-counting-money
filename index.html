@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>H mart Money Computing</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="/pound-sterling.ico" type="image/x-icon">
+    <link rel="icon" href="/pound-sterling.ico" type="image/x-icon">
+</head>
+    <body>
+        <form name="forms">
+        <!-- 돈 개수 입력 -->
+             <div class="money" name="money"> 
+                <h1 class="pounds" id="note">50£</h1>
+                <div class="nt" name="nt">
+                    <input type="number" id="inputValue50" onchange='printName50()'>
+                    <input type="text" id="textValue50" value="" readonly>  
+                </div>
+                <h1 class="pounds" id="note">20£</h1>
+                    <div class="nt">
+                        <input type="number" id="inputValue20" onchange='printName20()'>
+                    <input type="text" id="textValue20" value="" readonly>   
+                    </div>
+                <h1 class="pounds" id="note">10£</h1>
+                    <div class="nt">
+                        <input type="number" id="inputValue10" onchange='printName10()'>
+                    <input type="text" id="textValue10" value="" readonly>   
+                    </div>
+                <h1 class="pounds" name="5p">5£</h1>
+                    <div class="nt">
+                        <input type="number" id="inputValue5" onchange='printName5()'>
+                    <input type="text" id="textValue5" value="" readonly>    
+                 </div>
+                <h1 class="pounds" name="2p">2£</h1>
+                    <div class="nt">
+                        <input type="number" id="inputValue2" onchange='printName2()'>
+                    <input type="text" id="textValue2" value="" readonly>   
+                    </div>
+                <h1 class="pounds" name="2p">1£</h1>
+                   <div class="nt">
+                        <input type="number" id="inputValue1" onchange='printName1()'>
+                    <input type="text" id="textValue1" value="" readonly>  
+                    </div>
+                <h1 class="pounds" id="coin">0.50£</h1>
+                   <div class="nt">
+                        <input type="number" id="inputValue0.50" onchange='printName050()'>
+                    <input type="text" id="textValue0.50" value="" readonly>    
+                    </div>
+                <h1 class="pounds" id="coin">0.20£</h1>
+                  <div class="nt">
+                        <input type="number" id="inputValue0.20" onchange='printName020()'>
+                    <input type="text" id="textValue0.20" value="" readonly>    
+                    </div>
+                <h1 class="pounds" id="coin">0.10£</h1>
+                   <div class="nt">
+                        <input type="number" id="inputValue0.10" onchange='printName010()'>
+                    <input type="text" id="textValue0.10" value="" readonly>  
+                    </div>
+                <h1 class="pounds" id="coin">0.05£</h1>
+                   <div class="nt">
+                        <input type="number" id="inputValue0.05" onchange='printName005()'>
+                    <input type="text" id="textValue0.05" value="" readonly>  
+                    </div>
+                <h1 class="pounds" id="coin">0.02£</h1>
+                  <div class="nt">
+                        <input type="number" id="inputValue0.02" onchange='printName002()'>
+                    <input type="text" id="textValue0.02" value="" readonly>  
+                    </div>
+                <h1 class="pounds" id="coin">0.01£</h1>
+                   <div class="nt">
+                       <input type="number" id="inputValue0.01" onchange='printName001()'>
+                    <input type="text" id="textValue0.01" value="" readonly>  
+                   </div>
+        </div>
+        <!-- 돈 개수 입력 끝 -->
+
+        <!-- 계산 버튼 시작 -->
+        <div class="calculation">
+            <input type="button" name="button" value="계산" onclick='printName00()'>
+        </div>
+        <!-- 계산 버튼 끝 -->
+
+        <!-- 결과 나오는 부분 시작 -->
+        <div class="result">
+            <h1 class="total">Total</h1>
+                <div class="rs">
+                    <input type="text" class="pos" value="" id="total" readonly>  
+                </div>
+            <h1 class="money-in">Money In</h1>
+                <div class="mi">
+                    <input type="text" id="bfresult" value="" class="p3" readonly> 
+                    <div>
+                        <input type="text"  id="compare" value="" class="p4" onchange ='printName111()'>
+                    </div>
+                    <input type="text" id="result" class="p5" value="" readonly> 
+                </div>
+            </div>
+        <!-- 결과 나오는 부분 끝 -->
+        </form>
+        <script>
+            // https://hianna.tistory.com/411
+            function printName50()  {  
+            const name = 
+            document.getElementById('inputValue50').value;  
+            document.getElementById("textValue50").value = name * 50;}
+
+            function printName20()  {  
+            const name = 
+            document.getElementById('inputValue20').value;  
+            document.getElementById("textValue20").value = name * 20;}
+
+            function printName10()  {  
+            const name = 
+            document.getElementById('inputValue10').value;  
+            document.getElementById("textValue10").value = name * 10;}
+
+            function printName5()  {  
+            const name = 
+            document.getElementById('inputValue5').value;  
+            document.getElementById("textValue5").value = name * 5;}
+
+            function printName2()  {  
+            const name = 
+            document.getElementById('inputValue2').value;  
+            document.getElementById("textValue2").value = name * 2;}
+            
+            function printName1()  {  
+            const name = 
+            document.getElementById('inputValue1').value;  
+            document.getElementById("textValue1").value = (name * 1) + 20;}
+
+            function printName050()  {  
+            const name = 
+            document.getElementById('inputValue0.50').value;  
+            document.getElementById("textValue0.50").value = name * 0.5;}
+
+            function printName020()  {  
+            const name = 
+            document.getElementById('inputValue0.20').value;  
+            document.getElementById("textValue0.20").value = name * 0.2;}
+
+            function printName010()  {  
+            const name = 
+            document.getElementById('inputValue0.10').value;  
+            document.getElementById("textValue0.10").value = name * 0.1;}
+
+            function printName005()  {  
+            const name = 
+            document.getElementById('inputValue0.05').value;  
+            document.getElementById("textValue0.05").value = name * 0.05;}
+
+            function printName002()  {  
+            const name = 
+            document.getElementById('inputValue0.02').value;  
+            document.getElementById("textValue0.02").value = name * 0.02;}
+
+            function printName001()  {  
+            const name = 
+            document.getElementById("inputValue0.01").value;  
+            document.getElementById("textValue0.01").value = name * 0.01;}
+            
+            function printName00() {
+            const name = document.getElementById('textValue50').value; 
+            const name2 = document.getElementById('textValue20').value;  
+            const name3 = document.getElementById("textValue10").value;
+            const name4 = document.getElementById("textValue5").value;
+            const name5 = document.getElementById("textValue2").value;
+            const name6 = document.getElementById("textValue1").value;
+            const name7 = document.getElementById("textValue0.50").value;
+            const name8 = document.getElementById("textValue0.20").value;
+            const name9 = document.getElementById("textValue0.10").value;
+            const name10 = document.getElementById("textValue0.05").value;
+            const name11 = document.getElementById("textValue0.02").value;
+            const name12 = document.getElementById("textValue0.01").value;
+            // 소수점 안나와서 10, 100 곱하고 다시 10,100 나눠서 나눈값을 더해줌. (https://gongnamnam.tistory.com/47)
+            const int = parseInt(name) + parseInt(name2) + parseInt(name3) + parseInt(name4) + parseInt(name5) + parseInt(name6);
+            const dc = + parseInt(name7 * 10) + parseInt(name8 * 10) + parseInt(name9 * 10);
+            const dcc = parseInt(name10 * 100) + parseInt(name11 * 100) + parseInt(name12 * 100);
+            const dcpp = dcc * 0.01;
+            const dcp = dc * 0.1;
+            document.getElementById("total").value = int + dcpp + dcp;
+
+            const total = document.getElementById("total").value;
+            document.getElementById("bfresult").value = total - 167.7;}
+            // parseInt는 무조건 정수로 바꿔버려서 소수점 날라감 
+            function printName111() {
+                const cm = document.getElementById("compare").value;
+                const bf = document.getElementById("bfresult").value;
+                if ((cm * 100) == (bf * 100)){
+                document.getElementById("result").value = "Correct";
+                console.log(cm * 100)
+                console.log(bf * 100)
+                } else if ((cm * 100) != (bf * 100)){    
+                document.getElementById("result").value = "Incorrect";
+                console.log(cm * 100)
+                console.log(bf * 100)
+            }}
+
+
+            
+
+        </script>   
+    </body>
+</html>

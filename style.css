@@ -1,0 +1,153 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: rgb(118, 170, 215);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 100px 0px 100px 0px;
+}
+
+body form{
+    width:390px;
+    height:1430px;
+
+    background-color: #c5eaaf;
+}
+
+h1{
+    position: relative;
+    border-radius: 15px;
+    font-family: monospace;
+    font-size: 27px;
+    width: 325px;
+    height:75px;
+}
+
+#note{
+    padding: 22px 0px 0px 80px;
+    background-color: #F09FC1;
+}
+
+h1[name="5p"]{
+    padding: 22px 0px 0px 87px;
+    background-color: #F09FC1;
+}
+
+h1[name="2p"]{
+    padding: 22px 0px 0px 87px;
+    background-color: #c177fd;
+}
+
+#coin{
+    padding: 22px 0px 0px 68px;
+    background-color: #c177fd;
+}
+
+.pounds{
+    margin: 19px 0px 0px 36px;
+}
+
+.nt{
+    position: relative;
+    z-index: 1;
+    margin: -60px 0px 0px 210px;
+    text-align: center;
+    font-weight: bold;
+    
+}
+
+input[type="text"]{
+    text-align: center;
+    width: 100px;
+    height: 25px;
+    border-radius: 5px;
+    border-style: solid;
+    border-color:rgb(229, 241, 158)
+    
+}
+
+input[type="number"]{
+    text-align: center;
+    width: 70px;
+    height: 25px;
+    margin: 0px 0px 5px 10px;
+    border-radius: 5px;
+    border-style: solid;
+    border-color: aqua;
+}
+
+.calculation input[type="button"]{
+    background-color: #6F9DF7;
+    color: white;
+    border: none;
+    box-shadow: 0 4px 16px #5C82CE ;
+    font-weight: bold;
+    font-size: 25px;
+    font-family: monospace;
+    width:190px;
+    height:52px;
+    margin: 50px 0px 40px 100px;
+    border-radius: 30px;
+    transition: 0.6s;
+
+}
+
+.calculation input[type="button"]:hover{
+    background-color: rgba(111, 157, 247, 0.7) ;
+    cursor: pointer;
+    box-shadow: 0 2px 4px rgba(111, 157, 247, 0.6);
+}
+
+.total{
+    margin: 19px 0px -30px 36px;
+    padding: 22px 0px 0px 70px;
+    background-color: rgb(248, 228, 96);
+}
+
+.money-in{
+    height:100px;
+    margin: 19px 0px 0px 36px;
+    padding: 30px 0px 0px 55px;
+    background-color: #fa8888;
+}
+
+.rs{
+    position: relative;
+    z-index: 1;
+    left:95px;
+    bottom:20px;
+    text-align: center;
+}
+
+.mi{
+    position: relative;
+    z-index: 1;
+    left:95px;
+    bottom:93px;
+    text-align: center;
+}
+
+.p3{
+    margin-bottom: 5px;
+}
+
+.p4{
+    margin-bottom: 5px;
+}
+
+.p5{
+
+    border-width: 3px;
+    color: red;
+    font-weight: bold;
+}
+
+#result{
+    border-color: #a677fd;
+}
+
