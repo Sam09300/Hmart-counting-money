@@ -157,8 +157,7 @@
             document.getElementById("textValue0.02").value = (rd.toFixed(2));}
 
             function printName001()  {  
-            const name = 
-            document.getElementById("inputValue0.01").value;
+            const name = document.getElementById("inputValue0.01").value;
             const rd = name * 0.01;
             document.getElementById("textValue0.01").value = (rd.toFixed(2));}
             
@@ -177,31 +176,16 @@
             const name12 = document.getElementById("textValue0.01").value;
             // 소수점 안나와서 10, 100 곱하고 다시 10,100 나눠서 나눈값을 더해줌. (https://gongnamnam.tistory.com/47)
             const int = parseInt(name) + parseInt(name2) + parseInt(name3) + parseInt(name4) + parseInt(name5) + parseInt(name6);
-            const dc = + parseInt(name7 * 10) + parseInt(name8 * 10) + parseInt(name9 * 10);
-            const dcc = parseInt(name10 * 100) + parseInt(name11 * 100) + parseInt(name12 * 100);
-            const dcpp = dcc * 0.01;
-            const dcp = dc * 0.1;
-            document.getElementById("total").value = int + dcpp + dcp;
-
+            const decimal = + parseInt(name7 * 10) + parseInt(name8 * 10) + parseInt(name9 * 10);
+            const decimal2 = parseInt(name10 * 100) + parseInt(name11 * 100) + parseInt(name12 * 100);
+            const dcpp = decimal2 * 0.01;
+            const dcp = decimal * 0.1;
+            const final = int + dcpp + dcp;
+            document.getElementById("total").value = (final.toFixed(2));
             const total = document.getElementById("total").value;
-            document.getElementById("bfresult").value = total - 167.7;}
+            const netfinal = total - 167.7;
+            document.getElementById("bfresult").value = netfinal;}
             // parseInt는 무조건 정수로 바꿔버려서 소수점 날라감 
-            function printName111() {
-                const cm = document.getElementById("compare").value;
-                const bf = document.getElementById("bfresult").value;
-                if ((cm * 100) == (bf * 100)){
-                document.getElementById("result").value = "Correct";
-                console.log(cm * 100)
-                console.log(bf * 100)
-                } else if ((cm * 100) != (bf * 100)){    
-                document.getElementById("result").value = "Incorrect";
-                console.log(cm * 100)
-                console.log(bf * 100)
-            }}
-
-
-            
-
         </script>   
     </body>
 </html>
