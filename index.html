@@ -72,7 +72,16 @@
                        <input type="number" id="inputValue0.01" onchange='printName001()'>
                     <input type="text" id="textValue0.01" value="" readonly>  
                    </div>
+                <h1 class="pounds" name="voucher">Voucher</h1>
+                   <div class="nt">
+                       <input type="number" id="Voucher">
+                   </div>
+                <h1 class="pounds" name="voucher_change">Voucher After <br>Change</h1>
+                   <div class="nt">
+                       <input type="number" id="Voucher_Change">
+                   </div>
         </div>
+
         <!-- 돈 개수 입력 끝 -->
 
         <!-- 계산 버튼 시작 -->
@@ -83,15 +92,15 @@
 
         <!-- 결과 나오는 부분 시작 -->
         <div class="result">
-            <h1 class="total">Total</h1>
+            <h1 class="total">SubTotal</h1>
                 <div class="rs">
                     <input type="text" class="pos" value="" id="total" readonly>  
                 </div>
-            <h1 class="money-in">Money In</h1>
+            <h1 class="money-in">Total</h1>
                 <div class="mi">
                     <input type="text" id="bfresult" value="" class="p3" readonly> 
                 </div>
-            </div>
+        </div>
         <!-- 결과 나오는 부분 끝 -->
         </form>
         <script>
@@ -174,6 +183,8 @@
             const name10 = document.getElementById("textValue0.05").value;
             const name11 = document.getElementById("textValue0.02").value;
             const name12 = document.getElementById("textValue0.01").value;
+            const name13 = document.getElementById("Voucher").value;
+            const name14 = document.getElementById("Voucher_Change").value;
             // 소수점 안나와서 10, 100 곱하고 다시 10,100 나눠서 나눈값을 더해줌. (https://gongnamnam.tistory.com/47)
             const int = parseInt(name) + parseInt(name2) + parseInt(name3) + parseInt(name4) + parseInt(name5) + parseInt(name6);
             const decimal = + parseInt(name7 * 10) + parseInt(name8 * 10) + parseInt(name9 * 10);
@@ -181,10 +192,13 @@
             const dcpp = decimal2 * 0.01;
             const dcp = decimal * 0.1;
             const final = int + dcpp + dcp;
+            const Cal_Voucher = parseFloat(name13) - parseFloat(name14);
             document.getElementById("total").value = (final.toFixed(2));
             const total = document.getElementById("total").value;
+            const final_b4_voucher = total + Cal_Voucher;
             const netfinal = total - 167.7;
-            document.getElementById("bfresult").value = netfinal;}
+            document.getElementById("bfresult").value = netfinal + Cal_Voucher;
+        }
             // parseInt는 무조건 정수로 바꿔버려서 소수점 날라감 
         </script>   
     </body>
